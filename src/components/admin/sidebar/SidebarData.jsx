@@ -17,6 +17,21 @@ const SidebarData = ({ toggle }) => {
           icon: <i className="bi bi-people"></i>,
         },
         {
+          title: "Location",
+          path: "/dashboard/location",
+          icon: <i className="bi bi-map"></i>,
+        },
+        {
+          title: "Manament",
+          path: "/dashboard/generaldepartment",
+          icon: <i className="bi bi-cart"></i>,
+        },
+        {
+          title: "ListManament",
+          path: "/dashboard/listmanament",
+          icon: <i className="bi bi-cart"></i>,
+        },
+        {
           title: "Products",
           path: "/dashboard/products",
           icon: <i className="bi bi-archive"></i>,
@@ -57,9 +72,8 @@ const SidebarData = ({ toggle }) => {
               <Link
                 to={item.path}
                 key={item.path}
-                className={`${
-                  pathname === item.path ? "bg-white text-blue-950" : ""
-                } flex items-center mx-2 my-2 p-2 gap-5 hover:bg-white hover:text-blue-950 rounded-md`}
+                className={`${pathname === item.path ? "bg-white text-blue-950" : ""
+                  } flex items-center mx-2 my-2 p-2 gap-5 hover:bg-white hover:text-blue-950 rounded-md`}
               >
                 <div className="text-2xl">{item.icon}</div>
                 <div className={`${toggle ? "" : "hidden"} text-xl`}>

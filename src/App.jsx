@@ -30,6 +30,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./App.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import Location from "./pages/admin/Location/Location";
+import Management from "./pages/admin/GeneralDepartment/GenneralDepartment";
+import ListManager from "./pages/admin/GeneralDepartment/ListManager";
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -101,7 +104,7 @@ function App() {
       <ScrollToTop />
 
       <ToastContainer />
-      
+
       <Routes>
         <Route path="/" element={<ClientLayout />}>
           <Route index element={<Home />} />
@@ -120,6 +123,11 @@ function App() {
         <Route path="/dashboard" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="users" element={<List />} />
+          <Route path="/dashboard/location" element={<Location />} />
+          <Route path="/dashboard/generaldepartment" element={<Management />} />
+          <Route path="/dashboard/listmanament" element={<ListManager />} />
+
+
           <Route path="users/create" element={<Create />} />
           <Route path="users/:id" element={<Edit />} />
         </Route>
